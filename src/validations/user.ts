@@ -7,10 +7,10 @@ export const passwordSchema = z
   .string()
   .min(minPasswordLength)
   .max(100)
-  .refine((value) => /[0-9]/.test(value))
+  //.refine((value) => /[0-9]/.test(value))
   .refine((value) => /[a-z]/.test(value))
-  .refine((value) => /[A-Z]/.test(value))
-  .refine((value) => /[$&+,:;=?@#|'<>.^*()%!-]/.test(value));
+  //.refine((value) => /[A-Z]/.test(value))
+  //.refine((value) => /[$&+,:;=?@#|'<>.^*()%!-]/.test(value));
 
 export const signInSchema = z.object({
   name: z.string(),
